@@ -1,14 +1,17 @@
+import datetime
 from multiprocessing import Queue
+import os
 import random
 import socket
 import threading
 import time
 
 from constants import HOST, PORTS
+from utils import make_folder, setup_logger
 
 
 class Machine:
-    def __init__(self, id: int, port: int, tick: int, peers: list):
+    def __init__(self, id: int, port: int, tick: int, peers: list, folder):
         self.id = id
         self.port = port
         self.peers = peers
@@ -17,6 +20,7 @@ class Machine:
         self.lock = threading.Lock()
         self.queue = Queue()
         self.running = True
+        self.logger = setup_logger(str(self.id), folder)
 
         self.server_thread = threading.Thread(target=self.listen)
         self.server_thread.daemon = True
@@ -56,7 +60,7 @@ class Machine:
                 sender.sendall(msg.encode())
 
             except:
-                print("Machine failed")
+                self.logger.error(f"Machine {self.id} failed")
 
     def internal_event(self):
         with self.lock:
@@ -72,7 +76,7 @@ class Machine:
                 sender, received_clock = msg.split(":")
                 received_clock = int(received_clock)
                 self.clock = max(self.clock, received_clock) + 1
-                print(
+                self.logger.info(
                     f"Machine {self.id} received message, received {received_clock}, updated clock to {self.clock}"
                 )
 
@@ -80,55 +84,65 @@ class Machine:
                 action = random.randint(1, 10)
                 if action == 1:
                     self.send_message(self.peers[0])
-                    print(f"Machine {self.id} sent message to {self.peers[0]}")
+                    self.logger.info(
+                        f"Machine {self.id} sent message to {self.peers[0]}"
+                    )
 
                 elif action == 2:
                     self.send_message(self.peers[1])
-                    print(f"Machine {self.id} sent message to {self.peers[1]}")
+                    self.logger.info(
+                        f"Machine {self.id} sent message to {self.peers[1]}"
+                    )
 
                 elif action == 3:
                     self.send_message(self.peers[0])
                     self.send_message(self.peers[1])
-                    print(
+                    self.logger.info(
                         f"Machine {self.id} sent message to {self.peers[0]} and {self.peers[1]}"
                     )
 
                 else:
                     self.internal_event()
-                    print(
+                    self.logger.info(
                         f"Machine {self.id} internal event, clock updated to {self.clock}"
                     )
 
     def stop(self):
         self.running = False
-        print(f"Machine {self.id} shutting down.")
+        self.logger.info(f"Machine {self.id} shutting down.")
 
 
 if __name__ == "__main__":
+    if not os.path.exists("logs"):
+        os.makedirs("logs")
+
     vm1 = Machine(
         1,
         PORTS[0],
         random.randint(1, 6),
         [(HOST, port) for port in PORTS if port != PORTS[0]],
+        make_folder("1"),
     )
     vm2 = Machine(
         2,
         PORTS[1],
         random.randint(1, 6),
         [(HOST, port) for port in PORTS if port != PORTS[1]],
+        make_folder("2"),
     )
     vm3 = Machine(
         3,
         PORTS[2],
         random.randint(1, 6),
         [(HOST, port) for port in PORTS if port != PORTS[2]],
+        make_folder("3"),
     )
 
     try:
         threading.Thread(target=vm1.run).start()
         threading.Thread(target=vm2.run).start()
         threading.Thread(target=vm3.run).start()
-        time.sleep(10)  # let the machines communicate for a while
+        time.sleep(60)  # let the machines communicate for a while
         print("System turning off, jobs complete.")
     except:
         print("System shutting down because of error.")
