@@ -18,6 +18,10 @@ class Machine:
         self.queue = Queue()
         self.running = True
 
+        self.server_thread = threading.Thread(target=self.listen)
+        self.server_thread.daemon = True
+        self.server_thread.start()
+
     def listen(self):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as network:
             network.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -55,24 +59,29 @@ class Machine:
             except:
                 print("Machine failed")
 
-    def execute_event(self):
+    def internal_event(self):
         with self.lock:
             self.clock += 1
 
     def run(self):
         while self.running:
-            time.sleep(1)
+            # simulate self.tick operations per one second
+            time.sleep(1 / self.tick)
             action = random.choice(["internal", "send"])
 
             if action == "internal":
-                self.execute_event()
+                self.internal_event()
+                print(
+                    f"Machine {self.id} internal event, clock updated to {self.clock}"
+                )
             elif action == "send" and self.peers:
                 target = random.choice(self.peers)
                 self.send_message(target)
+                print(f"Machine {self.id} sent message to {target}")
 
     def stop(self):
         self.running = False
-        print(f"Machine {self.machine_id} shutting down.")
+        print(f"Machine {self.id} shutting down.")
 
 
 if __name__ == "__main__":
@@ -99,7 +108,7 @@ if __name__ == "__main__":
         threading.Thread(target=vm1.run).start()
         threading.Thread(target=vm2.run).start()
         threading.Thread(target=vm3.run).start()
-        time.sleep(60)  # let the machines communicate for a while
+        time.sleep(10)  # let the machines communicate for a while
     finally:
         vm1.stop()
         vm2.stop()
