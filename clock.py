@@ -42,10 +42,8 @@ class Machine:
         with client:
             data = client.recv(1024).decode()
             if data:
-                received_clock = int(data)
                 with self.lock:
-                    self.clock = max(self.clock, received_clock) + 1
-                    self.queue.put(received_clock)
+                    self.queue.put(data)
 
     def send_message(self, peer):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sender:
@@ -54,7 +52,8 @@ class Machine:
                 with self.lock:
                     self.clock += 1
 
-                sender.sendall(str(self.clock).encode())
+                msg = f"{self.id}:{self.clock}"
+                sender.sendall(msg.encode())
 
             except:
                 print("Machine failed")
@@ -67,17 +66,28 @@ class Machine:
         while self.running:
             # simulate self.tick operations per one second
             time.sleep(1 / self.tick)
-            action = random.choice(["internal", "send"])
 
-            if action == "internal":
-                self.internal_event()
+            if not self.queue.empty():
+                msg = self.queue.get()
+                sender, received_clock = msg.split(":")
+                received_clock = int(received_clock)
+                self.clock = max(self.clock, received_clock) + 1
                 print(
-                    f"Machine {self.id} internal event, clock updated to {self.clock}"
+                    f"Machine {self.id} received message, received {received_clock}, updated clock to {self.clock}"
                 )
-            elif action == "send" and self.peers:
-                target = random.choice(self.peers)
-                self.send_message(target)
-                print(f"Machine {self.id} sent message to {target}")
+
+            else:
+                action = random.choice(["internal", "send"])
+
+                if action == "internal":
+                    self.internal_event()
+                    print(
+                        f"Machine {self.id} internal event, clock updated to {self.clock}"
+                    )
+                elif action == "send" and self.peers:
+                    target = random.choice(self.peers)
+                    self.send_message(target)
+                    print(f"Machine {self.id} sent message to {target}")
 
     def stop(self):
         self.running = False
@@ -92,13 +102,13 @@ if __name__ == "__main__":
         [(HOST, port) for port in PORTS if port != PORTS[0]],
     )
     vm2 = Machine(
-        1,
+        2,
         PORTS[1],
         random.randint(1, 6),
         [(HOST, port) for port in PORTS if port != PORTS[1]],
     )
     vm3 = Machine(
-        1,
+        3,
         PORTS[2],
         random.randint(1, 6),
         [(HOST, port) for port in PORTS if port != PORTS[2]],
@@ -109,6 +119,9 @@ if __name__ == "__main__":
         threading.Thread(target=vm2.run).start()
         threading.Thread(target=vm3.run).start()
         time.sleep(10)  # let the machines communicate for a while
+        print("System turning off, jobs complete.")
+    except:
+        print("System shutting down because of error.")
     finally:
         vm1.stop()
         vm2.stop()
