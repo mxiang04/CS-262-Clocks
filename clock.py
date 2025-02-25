@@ -19,6 +19,7 @@ class Machine:
         self.tick = tick
         self.lock = threading.Lock()
         self.queue = Queue()
+        self.queue_size = 0
         self.running = True
         self.logger = setup_logger(str(self.id), folder)
 
@@ -38,7 +39,6 @@ class Machine:
                     threading.Thread(
                         target=self.receive_message, args=(client,)
                     ).start()
-
                 except Exception:
                     break
 
@@ -48,6 +48,7 @@ class Machine:
             if data:
                 with self.lock:
                     self.queue.put(data)
+                    self.queue_size += 1
 
     def send_message(self, peer):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sender:
@@ -59,8 +60,14 @@ class Machine:
                 msg = f"{self.id}:{self.clock}"
                 sender.sendall(msg.encode())
 
+                # log send event with system time
+                system_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                self.logger.info(
+                    f"[{system_time}] Machine {self.id} sent message to {peer}, Logical Clock: {self.clock}"
+                )
+
             except:
-                self.logger.error(f"Machine {self.id} failed")
+                self.logger.error(f"Machine {self.id} failed to send message to {peer}")
 
     def internal_event(self):
         with self.lock:
@@ -68,43 +75,37 @@ class Machine:
 
     def run(self):
         while self.running:
-            # simulate self.tick operations per one second
-            time.sleep(1 / self.tick)
+            time.sleep(1 / self.tick)  # simulate self.tick operations per second
+            system_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
             if not self.queue.empty():
-                msg = self.queue.get()
-                sender, received_clock = msg.split(":")
-                received_clock = int(received_clock)
-                self.clock = max(self.clock, received_clock) + 1
-                self.logger.info(
-                    f"Machine {self.id} received message, received {received_clock}, updated clock to {self.clock}"
-                )
+                with self.lock:
+                    msg = self.queue.get()
+                    sender, received_clock = msg.split(":")
+                    received_clock = int(received_clock)
+                    self.clock = max(self.clock, received_clock) + 1
+                    self.logger.info(
+                        f"[{system_time}] Machine {self.id} received message from {sender}, "
+                        f"Received Clock: {received_clock}, Queue Length: {self.queue_size}, Updated Logical Clock: {self.clock}"
+                    )
+                    self.queue_size -= 1
 
             else:
                 action = random.randint(1, 10)
                 if action == 1:
                     self.send_message(self.peers[0])
-                    self.logger.info(
-                        f"Machine {self.id} sent message to {self.peers[0]}"
-                    )
 
                 elif action == 2:
                     self.send_message(self.peers[1])
-                    self.logger.info(
-                        f"Machine {self.id} sent message to {self.peers[1]}"
-                    )
 
                 elif action == 3:
                     self.send_message(self.peers[0])
                     self.send_message(self.peers[1])
-                    self.logger.info(
-                        f"Machine {self.id} sent message to {self.peers[0]} and {self.peers[1]}"
-                    )
 
                 else:
                     self.internal_event()
                     self.logger.info(
-                        f"Machine {self.id} internal event, clock updated to {self.clock}"
+                        f"[{system_time}] Machine {self.id} internal event, Updated Logical Clock: {self.clock}"
                     )
 
     def stop(self):

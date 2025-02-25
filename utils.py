@@ -21,13 +21,13 @@ def setup_logger(logger_name, log_file, level=logging.INFO):
 
 
 def make_folder(id):
-    sub_folder = "logs/" + datetime.datetime.now().strftime("%m_%d_%y")
+    sub_folder = "logs/" + datetime.datetime.now().strftime("%m_%d_%y_%H:%M")
     if not os.path.exists(sub_folder):
         os.makedirs(sub_folder)
 
     return (
         "logs/"
-        + datetime.datetime.now().strftime("%m_%d_%y")
+        + datetime.datetime.now().strftime("%m_%d_%y_%H:%M")
         + "/machine"
         + str(id)
         + ".log"
