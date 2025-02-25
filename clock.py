@@ -77,17 +77,27 @@ class Machine:
                 )
 
             else:
-                action = random.choice(["internal", "send"])
+                action = random.randint(1, 10)
+                if action == 1:
+                    self.send_message(self.peers[0])
+                    print(f"Machine {self.id} sent message to {self.peers[0]}")
 
-                if action == "internal":
+                elif action == 2:
+                    self.send_message(self.peers[1])
+                    print(f"Machine {self.id} sent message to {self.peers[1]}")
+
+                elif action == 3:
+                    self.send_message(self.peers[0])
+                    self.send_message(self.peers[1])
+                    print(
+                        f"Machine {self.id} sent message to {self.peers[0]} and {self.peers[1]}"
+                    )
+
+                else:
                     self.internal_event()
                     print(
                         f"Machine {self.id} internal event, clock updated to {self.clock}"
                     )
-                elif action == "send" and self.peers:
-                    target = random.choice(self.peers)
-                    self.send_message(target)
-                    print(f"Machine {self.id} sent message to {target}")
 
     def stop(self):
         self.running = False
