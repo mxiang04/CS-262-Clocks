@@ -13,14 +13,34 @@ class Machine:
         self.peers = peers
         self.clock = 0
         self.tick = tick
+        self.lock = threading.Lock()
         self.queue = Queue()
         self.running = True
 
     def listen(self):
-        pass
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as network:
+            network.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            network.bind((HOST, self.port))
+            network.listen()
 
-    def handle_connection(self):
-        pass
+            while self.running:
+                try:
+                    client, _ = network.accept()
+                    threading.Thread(
+                        target=self.receive_message, args=(client,)
+                    ).start()
+
+                except Exception:
+                    break
+
+    def receive_message(self, client):
+        with client:
+            data = client.recv(1024).decode()
+            if data:
+                received_clock = int(data)
+                with self.lock:
+                    self.clock = max(self.clock, received_clock) + 1
+                    self.queue.put(received_clock)
 
     def send_message(self):
         pass
