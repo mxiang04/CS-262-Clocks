@@ -1,0 +1,175 @@
+[2025-03-02 21:09:15,912] INFO - [2025-03-02 21:09:15] Machine 2 sent message to ('localhost', 6542), Logical Clock: 1
+[2025-03-02 21:09:16,415] INFO - [2025-03-02 21:09:16] Machine 2 internal event, Updated Logical Clock: 2
+[2025-03-02 21:09:16,920] INFO - [2025-03-02 21:09:16] Machine 2 received message from 3, Received Clock: 4, Queue Length: 1, Updated Logical Clock: 5
+[2025-03-02 21:09:17,421] INFO - [2025-03-02 21:09:17] Machine 2 received message from 3, Received Clock: 7, Queue Length: 1, Updated Logical Clock: 8
+[2025-03-02 21:09:17,927] INFO - [2025-03-02 21:09:17] Machine 2 received message from 3, Received Clock: 9, Queue Length: 1, Updated Logical Clock: 10
+[2025-03-02 21:09:18,430] INFO - [2025-03-02 21:09:18] Machine 2 sent message to ('localhost', 6542), Logical Clock: 11
+[2025-03-02 21:09:18,430] INFO - [2025-03-02 21:09:18] Machine 2 sent message to ('localhost', 6540), Logical Clock: 12
+[2025-03-02 21:09:18,936] INFO - [2025-03-02 21:09:18] Machine 2 received message from 3, Received Clock: 15, Queue Length: 1, Updated Logical Clock: 16
+[2025-03-02 21:09:19,440] INFO - [2025-03-02 21:09:19] Machine 2 internal event, Updated Logical Clock: 17
+[2025-03-02 21:09:19,947] INFO - [2025-03-02 21:09:19] Machine 2 sent message to ('localhost', 6540), Logical Clock: 18
+[2025-03-02 21:09:20,452] INFO - [2025-03-02 21:09:20] Machine 2 internal event, Updated Logical Clock: 19
+[2025-03-02 21:09:20,953] INFO - [2025-03-02 21:09:20] Machine 2 received message from 3, Received Clock: 21, Queue Length: 1, Updated Logical Clock: 22
+[2025-03-02 21:09:21,459] INFO - [2025-03-02 21:09:21] Machine 2 received message from 3, Received Clock: 24, Queue Length: 1, Updated Logical Clock: 25
+[2025-03-02 21:09:21,965] INFO - [2025-03-02 21:09:21] Machine 2 received message from 3, Received Clock: 25, Queue Length: 1, Updated Logical Clock: 26
+[2025-03-02 21:09:22,468] INFO - [2025-03-02 21:09:22] Machine 2 sent message to ('localhost', 6540), Logical Clock: 27
+[2025-03-02 21:09:22,976] INFO - [2025-03-02 21:09:22] Machine 2 sent message to ('localhost', 6542), Logical Clock: 28
+[2025-03-02 21:09:23,480] INFO - [2025-03-02 21:09:23] Machine 2 received message from 3, Received Clock: 30, Queue Length: 1, Updated Logical Clock: 31
+[2025-03-02 21:09:23,987] INFO - [2025-03-02 21:09:23] Machine 2 sent message to ('localhost', 6542), Logical Clock: 32
+[2025-03-02 21:09:24,493] INFO - [2025-03-02 21:09:24] Machine 2 internal event, Updated Logical Clock: 33
+[2025-03-02 21:09:24,999] INFO - [2025-03-02 21:09:24] Machine 2 received message from 3, Received Clock: 34, Queue Length: 2, Updated Logical Clock: 35
+[2025-03-02 21:09:25,501] INFO - [2025-03-02 21:09:25] Machine 2 received message from 3, Received Clock: 36, Queue Length: 1, Updated Logical Clock: 37
+[2025-03-02 21:09:26,002] INFO - [2025-03-02 21:09:26] Machine 2 internal event, Updated Logical Clock: 38
+[2025-03-02 21:09:26,505] INFO - [2025-03-02 21:09:26] Machine 2 received message from 3, Received Clock: 40, Queue Length: 1, Updated Logical Clock: 41
+[2025-03-02 21:09:27,010] INFO - [2025-03-02 21:09:27] Machine 2 internal event, Updated Logical Clock: 42
+[2025-03-02 21:09:27,517] INFO - [2025-03-02 21:09:27] Machine 2 received message from 3, Received Clock: 44, Queue Length: 1, Updated Logical Clock: 45
+[2025-03-02 21:09:28,023] INFO - [2025-03-02 21:09:28] Machine 2 internal event, Updated Logical Clock: 46
+[2025-03-02 21:09:28,525] INFO - [2025-03-02 21:09:28] Machine 2 sent message to ('localhost', 6540), Logical Clock: 47
+[2025-03-02 21:09:29,028] INFO - [2025-03-02 21:09:29] Machine 2 sent message to ('localhost', 6542), Logical Clock: 48
+[2025-03-02 21:09:29,533] INFO - [2025-03-02 21:09:29] Machine 2 received message from 3, Received Clock: 50, Queue Length: 1, Updated Logical Clock: 51
+[2025-03-02 21:09:30,038] INFO - [2025-03-02 21:09:30] Machine 2 sent message to ('localhost', 6540), Logical Clock: 52
+[2025-03-02 21:09:30,541] INFO - [2025-03-02 21:09:30] Machine 2 internal event, Updated Logical Clock: 53
+[2025-03-02 21:09:31,047] INFO - [2025-03-02 21:09:31] Machine 2 received message from 3, Received Clock: 55, Queue Length: 1, Updated Logical Clock: 56
+[2025-03-02 21:09:31,551] INFO - [2025-03-02 21:09:31] Machine 2 sent message to ('localhost', 6540), Logical Clock: 57
+[2025-03-02 21:09:32,056] INFO - [2025-03-02 21:09:32] Machine 2 sent message to ('localhost', 6542), Logical Clock: 58
+[2025-03-02 21:09:32,057] INFO - [2025-03-02 21:09:32] Machine 2 sent message to ('localhost', 6540), Logical Clock: 59
+[2025-03-02 21:09:32,560] INFO - [2025-03-02 21:09:32] Machine 2 sent message to ('localhost', 6542), Logical Clock: 60
+[2025-03-02 21:09:32,561] INFO - [2025-03-02 21:09:32] Machine 2 sent message to ('localhost', 6540), Logical Clock: 61
+[2025-03-02 21:09:33,066] INFO - [2025-03-02 21:09:33] Machine 2 sent message to ('localhost', 6542), Logical Clock: 62
+[2025-03-02 21:09:33,067] INFO - [2025-03-02 21:09:33] Machine 2 sent message to ('localhost', 6540), Logical Clock: 63
+[2025-03-02 21:09:33,576] INFO - [2025-03-02 21:09:33] Machine 2 sent message to ('localhost', 6542), Logical Clock: 64
+[2025-03-02 21:09:33,577] INFO - [2025-03-02 21:09:33] Machine 2 sent message to ('localhost', 6540), Logical Clock: 65
+[2025-03-02 21:09:34,078] INFO - [2025-03-02 21:09:34] Machine 2 internal event, Updated Logical Clock: 66
+[2025-03-02 21:09:34,584] INFO - [2025-03-02 21:09:34] Machine 2 received message from 3, Received Clock: 69, Queue Length: 1, Updated Logical Clock: 70
+[2025-03-02 21:09:35,090] INFO - [2025-03-02 21:09:35] Machine 2 internal event, Updated Logical Clock: 71
+[2025-03-02 21:09:35,596] INFO - [2025-03-02 21:09:35] Machine 2 received message from 3, Received Clock: 72, Queue Length: 1, Updated Logical Clock: 73
+[2025-03-02 21:09:36,101] INFO - [2025-03-02 21:09:36] Machine 2 received message from 3, Received Clock: 74, Queue Length: 1, Updated Logical Clock: 75
+[2025-03-02 21:09:36,608] INFO - [2025-03-02 21:09:36] Machine 2 sent message to ('localhost', 6542), Logical Clock: 76
+[2025-03-02 21:09:37,114] INFO - [2025-03-02 21:09:37] Machine 2 received message from 3, Received Clock: 77, Queue Length: 1, Updated Logical Clock: 78
+[2025-03-02 21:09:37,622] INFO - [2025-03-02 21:09:37] Machine 2 sent message to ('localhost', 6540), Logical Clock: 79
+[2025-03-02 21:09:38,128] INFO - [2025-03-02 21:09:38] Machine 2 received message from 3, Received Clock: 82, Queue Length: 1, Updated Logical Clock: 83
+[2025-03-02 21:09:38,635] INFO - [2025-03-02 21:09:38] Machine 2 sent message to ('localhost', 6540), Logical Clock: 84
+[2025-03-02 21:09:39,141] INFO - [2025-03-02 21:09:39] Machine 2 internal event, Updated Logical Clock: 85
+[2025-03-02 21:09:39,647] INFO - [2025-03-02 21:09:39] Machine 2 received message from 3, Received Clock: 87, Queue Length: 1, Updated Logical Clock: 88
+[2025-03-02 21:09:40,150] INFO - [2025-03-02 21:09:40] Machine 2 internal event, Updated Logical Clock: 89
+[2025-03-02 21:09:40,656] INFO - [2025-03-02 21:09:40] Machine 2 sent message to ('localhost', 6540), Logical Clock: 90
+[2025-03-02 21:09:41,162] INFO - [2025-03-02 21:09:41] Machine 2 sent message to ('localhost', 6540), Logical Clock: 91
+[2025-03-02 21:09:41,668] INFO - [2025-03-02 21:09:41] Machine 2 internal event, Updated Logical Clock: 92
+[2025-03-02 21:09:42,172] INFO - [2025-03-02 21:09:42] Machine 2 received message from 3, Received Clock: 94, Queue Length: 1, Updated Logical Clock: 95
+[2025-03-02 21:09:42,677] INFO - [2025-03-02 21:09:42] Machine 2 received message from 3, Received Clock: 97, Queue Length: 1, Updated Logical Clock: 98
+[2025-03-02 21:09:43,185] INFO - [2025-03-02 21:09:43] Machine 2 sent message to ('localhost', 6540), Logical Clock: 99
+[2025-03-02 21:09:43,688] INFO - [2025-03-02 21:09:43] Machine 2 received message from 3, Received Clock: 101, Queue Length: 1, Updated Logical Clock: 102
+[2025-03-02 21:09:44,198] INFO - [2025-03-02 21:09:44] Machine 2 sent message to ('localhost', 6542), Logical Clock: 103
+[2025-03-02 21:09:44,199] INFO - [2025-03-02 21:09:44] Machine 2 sent message to ('localhost', 6540), Logical Clock: 104
+[2025-03-02 21:09:44,704] INFO - [2025-03-02 21:09:44] Machine 2 internal event, Updated Logical Clock: 105
+[2025-03-02 21:09:45,210] INFO - [2025-03-02 21:09:45] Machine 2 received message from 3, Received Clock: 108, Queue Length: 1, Updated Logical Clock: 109
+[2025-03-02 21:09:45,715] INFO - [2025-03-02 21:09:45] Machine 2 internal event, Updated Logical Clock: 110
+[2025-03-02 21:09:46,217] INFO - [2025-03-02 21:09:46] Machine 2 internal event, Updated Logical Clock: 111
+[2025-03-02 21:09:46,719] INFO - [2025-03-02 21:09:46] Machine 2 received message from 3, Received Clock: 113, Queue Length: 1, Updated Logical Clock: 114
+[2025-03-02 21:09:47,225] INFO - [2025-03-02 21:09:47] Machine 2 received message from 3, Received Clock: 116, Queue Length: 1, Updated Logical Clock: 117
+[2025-03-02 21:09:47,728] INFO - [2025-03-02 21:09:47] Machine 2 sent message to ('localhost', 6542), Logical Clock: 118
+[2025-03-02 21:09:48,232] INFO - [2025-03-02 21:09:48] Machine 2 received message from 3, Received Clock: 120, Queue Length: 1, Updated Logical Clock: 121
+[2025-03-02 21:09:48,738] INFO - [2025-03-02 21:09:48] Machine 2 received message from 3, Received Clock: 121, Queue Length: 2, Updated Logical Clock: 122
+[2025-03-02 21:09:49,241] INFO - [2025-03-02 21:09:49] Machine 2 received message from 3, Received Clock: 123, Queue Length: 1, Updated Logical Clock: 124
+[2025-03-02 21:09:49,746] INFO - [2025-03-02 21:09:49] Machine 2 received message from 3, Received Clock: 126, Queue Length: 1, Updated Logical Clock: 127
+[2025-03-02 21:09:50,249] INFO - [2025-03-02 21:09:50] Machine 2 received message from 3, Received Clock: 128, Queue Length: 1, Updated Logical Clock: 129
+[2025-03-02 21:09:50,753] INFO - [2025-03-02 21:09:50] Machine 2 received message from 3, Received Clock: 130, Queue Length: 1, Updated Logical Clock: 131
+[2025-03-02 21:09:51,258] INFO - [2025-03-02 21:09:51] Machine 2 received message from 3, Received Clock: 133, Queue Length: 1, Updated Logical Clock: 134
+[2025-03-02 21:09:51,764] INFO - [2025-03-02 21:09:51] Machine 2 received message from 3, Received Clock: 135, Queue Length: 1, Updated Logical Clock: 136
+[2025-03-02 21:09:52,269] INFO - [2025-03-02 21:09:52] Machine 2 received message from 3, Received Clock: 138, Queue Length: 1, Updated Logical Clock: 139
+[2025-03-02 21:09:52,779] INFO - [2025-03-02 21:09:52] Machine 2 sent message to ('localhost', 6542), Logical Clock: 140
+[2025-03-02 21:09:52,782] INFO - [2025-03-02 21:09:52] Machine 2 sent message to ('localhost', 6540), Logical Clock: 141
+[2025-03-02 21:09:53,288] INFO - [2025-03-02 21:09:53] Machine 2 internal event, Updated Logical Clock: 142
+[2025-03-02 21:09:53,793] INFO - [2025-03-02 21:09:53] Machine 2 received message from 3, Received Clock: 144, Queue Length: 1, Updated Logical Clock: 145
+[2025-03-02 21:09:54,297] INFO - [2025-03-02 21:09:54] Machine 2 received message from 3, Received Clock: 146, Queue Length: 1, Updated Logical Clock: 147
+[2025-03-02 21:09:54,802] INFO - [2025-03-02 21:09:54] Machine 2 received message from 3, Received Clock: 147, Queue Length: 2, Updated Logical Clock: 148
+[2025-03-02 21:09:55,305] INFO - [2025-03-02 21:09:55] Machine 2 received message from 3, Received Clock: 149, Queue Length: 1, Updated Logical Clock: 150
+[2025-03-02 21:09:55,810] INFO - [2025-03-02 21:09:55] Machine 2 received message from 3, Received Clock: 152, Queue Length: 1, Updated Logical Clock: 153
+[2025-03-02 21:09:56,314] INFO - [2025-03-02 21:09:56] Machine 2 received message from 3, Received Clock: 154, Queue Length: 1, Updated Logical Clock: 155
+[2025-03-02 21:09:56,820] INFO - [2025-03-02 21:09:56] Machine 2 received message from 3, Received Clock: 155, Queue Length: 1, Updated Logical Clock: 156
+[2025-03-02 21:09:57,324] INFO - [2025-03-02 21:09:57] Machine 2 internal event, Updated Logical Clock: 157
+[2025-03-02 21:09:57,827] INFO - [2025-03-02 21:09:57] Machine 2 received message from 3, Received Clock: 160, Queue Length: 1, Updated Logical Clock: 161
+[2025-03-02 21:09:58,333] INFO - [2025-03-02 21:09:58] Machine 2 sent message to ('localhost', 6542), Logical Clock: 162
+[2025-03-02 21:09:58,837] INFO - [2025-03-02 21:09:58] Machine 2 received message from 3, Received Clock: 162, Queue Length: 2, Updated Logical Clock: 163
+[2025-03-02 21:09:59,342] INFO - [2025-03-02 21:09:59] Machine 2 received message from 3, Received Clock: 164, Queue Length: 1, Updated Logical Clock: 165
+[2025-03-02 21:09:59,849] INFO - [2025-03-02 21:09:59] Machine 2 sent message to ('localhost', 6542), Logical Clock: 166
+[2025-03-02 21:09:59,851] INFO - [2025-03-02 21:09:59] Machine 2 sent message to ('localhost', 6540), Logical Clock: 167
+[2025-03-02 21:10:00,356] INFO - [2025-03-02 21:10:00] Machine 2 internal event, Updated Logical Clock: 168
+[2025-03-02 21:10:00,863] INFO - [2025-03-02 21:10:00] Machine 2 received message from 3, Received Clock: 170, Queue Length: 2, Updated Logical Clock: 171
+[2025-03-02 21:10:01,369] INFO - [2025-03-02 21:10:01] Machine 2 received message from 3, Received Clock: 172, Queue Length: 1, Updated Logical Clock: 173
+[2025-03-02 21:10:01,873] INFO - [2025-03-02 21:10:01] Machine 2 received message from 3, Received Clock: 174, Queue Length: 1, Updated Logical Clock: 175
+[2025-03-02 21:10:02,380] INFO - [2025-03-02 21:10:02] Machine 2 sent message to ('localhost', 6542), Logical Clock: 176
+[2025-03-02 21:10:02,887] INFO - [2025-03-02 21:10:02] Machine 2 sent message to ('localhost', 6540), Logical Clock: 177
+[2025-03-02 21:10:03,391] INFO - [2025-03-02 21:10:03] Machine 2 sent message to ('localhost', 6542), Logical Clock: 178
+[2025-03-02 21:10:03,897] INFO - [2025-03-02 21:10:03] Machine 2 received message from 3, Received Clock: 181, Queue Length: 2, Updated Logical Clock: 182
+[2025-03-02 21:10:04,401] INFO - [2025-03-02 21:10:04] Machine 2 received message from 3, Received Clock: 183, Queue Length: 1, Updated Logical Clock: 184
+[2025-03-02 21:10:04,903] INFO - [2025-03-02 21:10:04] Machine 2 sent message to ('localhost', 6542), Logical Clock: 185
+[2025-03-02 21:10:04,904] INFO - [2025-03-02 21:10:04] Machine 2 sent message to ('localhost', 6540), Logical Clock: 186
+[2025-03-02 21:10:05,410] INFO - [2025-03-02 21:10:05] Machine 2 sent message to ('localhost', 6542), Logical Clock: 187
+[2025-03-02 21:10:05,412] INFO - [2025-03-02 21:10:05] Machine 2 sent message to ('localhost', 6540), Logical Clock: 188
+[2025-03-02 21:10:05,915] INFO - [2025-03-02 21:10:05] Machine 2 received message from 3, Received Clock: 191, Queue Length: 1, Updated Logical Clock: 192
+[2025-03-02 21:10:06,419] INFO - [2025-03-02 21:10:06] Machine 2 received message from 3, Received Clock: 193, Queue Length: 1, Updated Logical Clock: 194
+[2025-03-02 21:10:06,925] INFO - [2025-03-02 21:10:06] Machine 2 received message from 3, Received Clock: 194, Queue Length: 1, Updated Logical Clock: 195
+[2025-03-02 21:10:07,431] INFO - [2025-03-02 21:10:07] Machine 2 received message from 3, Received Clock: 196, Queue Length: 1, Updated Logical Clock: 197
+[2025-03-02 21:10:07,936] INFO - [2025-03-02 21:10:07] Machine 2 internal event, Updated Logical Clock: 198
+[2025-03-02 21:10:08,442] INFO - [2025-03-02 21:10:08] Machine 2 internal event, Updated Logical Clock: 199
+[2025-03-02 21:10:08,947] INFO - [2025-03-02 21:10:08] Machine 2 received message from 3, Received Clock: 201, Queue Length: 1, Updated Logical Clock: 202
+[2025-03-02 21:10:09,451] INFO - [2025-03-02 21:10:09] Machine 2 received message from 3, Received Clock: 203, Queue Length: 1, Updated Logical Clock: 204
+[2025-03-02 21:10:09,953] INFO - [2025-03-02 21:10:09] Machine 2 internal event, Updated Logical Clock: 205
+[2025-03-02 21:10:10,459] INFO - [2025-03-02 21:10:10] Machine 2 received message from 3, Received Clock: 207, Queue Length: 1, Updated Logical Clock: 208
+[2025-03-02 21:10:10,961] INFO - [2025-03-02 21:10:10] Machine 2 received message from 3, Received Clock: 208, Queue Length: 1, Updated Logical Clock: 209
+[2025-03-02 21:10:11,467] INFO - [2025-03-02 21:10:11] Machine 2 received message from 3, Received Clock: 210, Queue Length: 1, Updated Logical Clock: 211
+[2025-03-02 21:10:11,973] INFO - [2025-03-02 21:10:11] Machine 2 received message from 3, Received Clock: 213, Queue Length: 1, Updated Logical Clock: 214
+[2025-03-02 21:10:12,480] INFO - [2025-03-02 21:10:12] Machine 2 sent message to ('localhost', 6542), Logical Clock: 215
+[2025-03-02 21:10:12,481] INFO - [2025-03-02 21:10:12] Machine 2 sent message to ('localhost', 6540), Logical Clock: 216
+[2025-03-02 21:10:12,982] INFO - [2025-03-02 21:10:12] Machine 2 internal event, Updated Logical Clock: 217
+[2025-03-02 21:10:13,486] INFO - [2025-03-02 21:10:13] Machine 2 internal event, Updated Logical Clock: 218
+[2025-03-02 21:10:13,994] INFO - [2025-03-02 21:10:13] Machine 2 received message from 3, Received Clock: 221, Queue Length: 1, Updated Logical Clock: 222
+[2025-03-02 21:10:14,500] INFO - [2025-03-02 21:10:14] Machine 2 internal event, Updated Logical Clock: 223
+[2025-03-02 21:10:15,005] INFO - [2025-03-02 21:10:15] Machine 2 received message from 3, Received Clock: 225, Queue Length: 1, Updated Logical Clock: 226
+[2025-03-02 21:10:15,507] INFO - [2025-03-02 21:10:15] Machine 2 received message from 3, Received Clock: 227, Queue Length: 1, Updated Logical Clock: 228
+[2025-03-02 21:10:16,008] INFO - [2025-03-02 21:10:16] Machine 2 received message from 3, Received Clock: 230, Queue Length: 1, Updated Logical Clock: 231
+[2025-03-02 21:10:16,513] INFO - [2025-03-02 21:10:16] Machine 2 internal event, Updated Logical Clock: 232
+[2025-03-02 21:10:17,019] INFO - [2025-03-02 21:10:17] Machine 2 sent message to ('localhost', 6540), Logical Clock: 233
+[2025-03-02 21:10:17,524] INFO - [2025-03-02 21:10:17] Machine 2 received message from 3, Received Clock: 235, Queue Length: 1, Updated Logical Clock: 236
+[2025-03-02 21:10:18,030] INFO - [2025-03-02 21:10:18] Machine 2 received message from 3, Received Clock: 237, Queue Length: 1, Updated Logical Clock: 238
+[2025-03-02 21:10:18,534] INFO - [2025-03-02 21:10:18] Machine 2 sent message to ('localhost', 6542), Logical Clock: 239
+[2025-03-02 21:10:19,040] INFO - [2025-03-02 21:10:19] Machine 2 received message from 3, Received Clock: 240, Queue Length: 1, Updated Logical Clock: 241
+[2025-03-02 21:10:19,548] INFO - [2025-03-02 21:10:19] Machine 2 sent message to ('localhost', 6542), Logical Clock: 242
+[2025-03-02 21:10:19,551] INFO - [2025-03-02 21:10:19] Machine 2 sent message to ('localhost', 6540), Logical Clock: 243
+[2025-03-02 21:10:20,053] INFO - [2025-03-02 21:10:20] Machine 2 sent message to ('localhost', 6542), Logical Clock: 244
+[2025-03-02 21:10:20,054] INFO - [2025-03-02 21:10:20] Machine 2 sent message to ('localhost', 6540), Logical Clock: 245
+[2025-03-02 21:10:20,557] INFO - [2025-03-02 21:10:20] Machine 2 received message from 3, Received Clock: 248, Queue Length: 1, Updated Logical Clock: 249
+[2025-03-02 21:10:21,062] INFO - [2025-03-02 21:10:21] Machine 2 internal event, Updated Logical Clock: 250
+[2025-03-02 21:10:21,565] INFO - [2025-03-02 21:10:21] Machine 2 internal event, Updated Logical Clock: 251
+[2025-03-02 21:10:22,069] INFO - [2025-03-02 21:10:22] Machine 2 received message from 3, Received Clock: 252, Queue Length: 1, Updated Logical Clock: 253
+[2025-03-02 21:10:22,576] INFO - [2025-03-02 21:10:22] Machine 2 sent message to ('localhost', 6540), Logical Clock: 254
+[2025-03-02 21:10:23,079] INFO - [2025-03-02 21:10:23] Machine 2 internal event, Updated Logical Clock: 255
+[2025-03-02 21:10:23,586] INFO - [2025-03-02 21:10:23] Machine 2 sent message to ('localhost', 6542), Logical Clock: 256
+[2025-03-02 21:10:24,092] INFO - [2025-03-02 21:10:24] Machine 2 internal event, Updated Logical Clock: 257
+[2025-03-02 21:10:24,594] INFO - [2025-03-02 21:10:24] Machine 2 received message from 3, Received Clock: 260, Queue Length: 2, Updated Logical Clock: 261
+[2025-03-02 21:10:25,099] INFO - [2025-03-02 21:10:25] Machine 2 received message from 3, Received Clock: 262, Queue Length: 1, Updated Logical Clock: 263
+[2025-03-02 21:10:25,602] INFO - [2025-03-02 21:10:25] Machine 2 received message from 3, Received Clock: 264, Queue Length: 1, Updated Logical Clock: 265
+[2025-03-02 21:10:26,108] INFO - [2025-03-02 21:10:26] Machine 2 sent message to ('localhost', 6540), Logical Clock: 266
+[2025-03-02 21:10:26,612] INFO - [2025-03-02 21:10:26] Machine 2 internal event, Updated Logical Clock: 267
+[2025-03-02 21:10:27,114] INFO - [2025-03-02 21:10:27] Machine 2 received message from 3, Received Clock: 269, Queue Length: 1, Updated Logical Clock: 270
+[2025-03-02 21:10:27,618] INFO - [2025-03-02 21:10:27] Machine 2 sent message to ('localhost', 6542), Logical Clock: 271
+[2025-03-02 21:10:27,619] INFO - [2025-03-02 21:10:27] Machine 2 sent message to ('localhost', 6540), Logical Clock: 272
+[2025-03-02 21:10:28,126] INFO - [2025-03-02 21:10:28] Machine 2 sent message to ('localhost', 6542), Logical Clock: 273
+[2025-03-02 21:10:28,128] INFO - [2025-03-02 21:10:28] Machine 2 sent message to ('localhost', 6540), Logical Clock: 274
+[2025-03-02 21:10:28,633] INFO - [2025-03-02 21:10:28] Machine 2 received message from 3, Received Clock: 277, Queue Length: 1, Updated Logical Clock: 278
+[2025-03-02 21:10:29,139] INFO - [2025-03-02 21:10:29] Machine 2 internal event, Updated Logical Clock: 279
+[2025-03-02 21:10:29,644] INFO - [2025-03-02 21:10:29] Machine 2 received message from 3, Received Clock: 279, Queue Length: 2, Updated Logical Clock: 280
+[2025-03-02 21:10:30,150] INFO - [2025-03-02 21:10:30] Machine 2 received message from 3, Received Clock: 281, Queue Length: 1, Updated Logical Clock: 282
+[2025-03-02 21:10:30,651] INFO - [2025-03-02 21:10:30] Machine 2 internal event, Updated Logical Clock: 283
+[2025-03-02 21:10:31,153] INFO - [2025-03-02 21:10:31] Machine 2 internal event, Updated Logical Clock: 284
+[2025-03-02 21:10:31,659] INFO - [2025-03-02 21:10:31] Machine 2 received message from 3, Received Clock: 287, Queue Length: 2, Updated Logical Clock: 288
+[2025-03-02 21:10:32,163] INFO - [2025-03-02 21:10:32] Machine 2 received message from 3, Received Clock: 289, Queue Length: 1, Updated Logical Clock: 290
+[2025-03-02 21:10:32,669] INFO - [2025-03-02 21:10:32] Machine 2 sent message to ('localhost', 6540), Logical Clock: 291
+[2025-03-02 21:10:33,173] INFO - [2025-03-02 21:10:33] Machine 2 sent message to ('localhost', 6542), Logical Clock: 292
+[2025-03-02 21:10:33,678] INFO - [2025-03-02 21:10:33] Machine 2 received message from 3, Received Clock: 295, Queue Length: 1, Updated Logical Clock: 296
+[2025-03-02 21:10:34,181] INFO - [2025-03-02 21:10:34] Machine 2 sent message to ('localhost', 6542), Logical Clock: 297
+[2025-03-02 21:10:34,685] INFO - [2025-03-02 21:10:34] Machine 2 internal event, Updated Logical Clock: 298
+[2025-03-02 21:10:35,190] INFO - [2025-03-02 21:10:35] Machine 2 received message from 3, Received Clock: 299, Queue Length: 1, Updated Logical Clock: 300
+[2025-03-02 21:10:35,409] INFO - Machine 2 shutting down.
+[2025-03-02 21:10:35,694] INFO - [2025-03-02 21:10:35] Machine 2 received message from 3, Received Clock: 301, Queue Length: 1, Updated Logical Clock: 302
