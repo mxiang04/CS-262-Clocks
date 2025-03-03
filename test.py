@@ -1,4 +1,5 @@
 import datetime
+from multiprocessing import Queue
 import unittest
 import os
 import threading
@@ -80,6 +81,17 @@ class TestLogicalClocks(unittest.TestCase):
             self.assertGreater(len(log_contents), 0, f"Log file {log_file} is empty")
 
         print("Machines ran, logged, and shut down cleanly.")
+
+    def test_vm_message_exchange(self):
+        """
+        Verify VMs can send and receive messages to/from each other.
+        """
+        for thread in self.vm_threads:
+            thread.start()
+
+        self.VMs[1].queue = Queue()
+        # VM 0 sends a message to VM 1
+        self.VMs[0].send_message((HOST, PORTS[1]))
 
 
 if __name__ == "__main__":
