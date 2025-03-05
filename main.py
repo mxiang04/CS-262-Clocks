@@ -6,7 +6,7 @@ from multiprocessing import Process
 from constants import HOST, PORTS
 from utils import make_folder
 
-from clock import Machine  # Assuming you put Machine in a file called machine.py
+from clock import Machine
 
 
 def run_machine(index):
@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
     processes = []
 
-    # Start each machine in its own process
+    # start each machine in its own process
     for i in range(3):
         p = Process(target=run_machine, args=(i,))
         p.start()
