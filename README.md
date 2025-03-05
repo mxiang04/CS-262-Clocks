@@ -24,14 +24,16 @@ Install the necessary dependencies. Most of the dependencies and packages that w
 You can now run our app! In the terminal, type in
 
 ```
-python clocks.py
+python main.py
 ```
 
 You will then see the logs generate not only in the terminal but in the `logs` folder on the side, separated by date of run and then by each machine.
 
 ## Architecture
 
-`clocks.py` - where the bulk of our program lies and where the virtual machines are instantiated and run. We use sockets as our communication method, and we create a 'Machine' class that contains sockets and methods necessary to initialize one virtual machine.
+`main.py` - where we spin up the three processes and initialize our three VMs
+
+`clocks.py` - where the bulk of our program lies and where the virtual machines are run. We use sockets as our communication method, and we create a 'Machine' class that contains sockets and methods necessary to initialize one virtual machine.
 
 `main.py` - where we initialize each machine in a different process. Our file creates 3 virtual machines with varying clock ticks that are all able to communicate with each other via pre-defined ports.
 
