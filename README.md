@@ -24,6 +24,9 @@ You will then see the logs generate not only in the terminal but in the `logs` f
 
 ## Architecture 
 `clocks.py` - where the bulk of our program lies and where the virtual machines are instantiated and run 
+
 `constants.py` - houses the host and ports we use to run our virtual machines 
+
 `test.py` - our tests for this program 
+
 `utils.py` - setting up utilities such as logging, creating the necessary log folders, etc. 
