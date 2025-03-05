@@ -31,7 +31,9 @@ You will then see the logs generate not only in the terminal but in the `logs` f
 
 ## Architecture
 
-`clocks.py` - where the bulk of our program lies and where the virtual machines are instantiated and run. We use sockets as our communication method, and we create a 'Machine' class that contains sockets and methods necessary to initialize one virtual machine. Our file creates 3 virtual machines with varying clock ticks that are all able to communicate with each other via pre-defined ports.
+`clocks.py` - where the bulk of our program lies and where the virtual machines are instantiated and run. We use sockets as our communication method, and we create a 'Machine' class that contains sockets and methods necessary to initialize one virtual machine.
+
+`main.py` - where we initialize each machine in a different process. Our file creates 3 virtual machines with varying clock ticks that are all able to communicate with each other via pre-defined ports.
 
 `constants.py` - houses the host and ports we use to run our virtual machines
 
