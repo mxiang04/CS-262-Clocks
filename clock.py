@@ -134,7 +134,7 @@ class Machine:
 
             # when there are no messages in the queue we create a randomized action 
             else:
-                action = random.randint(1, 5)
+                action = random.randint(1, 10)
                 if action == 1:
                     # send to one of the other machines a message 
                     self.send_message(self.peers[0])
@@ -171,7 +171,7 @@ if __name__ == "__main__":
     # assigns different ports to each virtual machine as we are running each machine on the same physical computer 
     # so we need to differentiate using different port #s 
     VMs = [] 
-    clock_range_max = 3
+    clock_range_max = 6
     for index in range(3): 
         tick = random.randint(1, clock_range_max)
         VMs.append(Machine(
